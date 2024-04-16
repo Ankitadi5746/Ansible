@@ -119,13 +119,13 @@ ansible all -m yum -a "name=httpd state=absent" -b
 
 
 Examples :
-ansible -i inventory all -m yum -a "name=httpd state=latest" -b     #to install httpd
+ansible -i inventory all -m yum -a "name=httpd state=latest" -b          #to install httpd
 
 ansible -i inventory all -m service -a "name=httpd state=started" -b     #to start service
 
 ansible -i inventory all -m service -a "name=httpd state=stopped" -b     #to stop service
 
-ansible -i inventory all -m service -a "name=httpd state=absent" -b     #to uninstall service
+ansible -i inventory all -m yum -a "name=httpd state=absent" -b           #to uninstall service
 
 ansible -i inventory all -m service -a "name=httpd state=restarted" -b     #to restart service
 
